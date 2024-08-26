@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Ui;
 
 [CreateAssetMenu(fileName = "New Int Data", menuName = "Int Data")]
 public class IntData : ScriptableObject
@@ -33,5 +34,20 @@ public class IntData : ScriptableObject
     public void UpdateValue(int num)
     {
         value += num;
+    }
+
+    public void ReplaceValue(int num)
+    {
+        value = num;
+    }
+
+    public void DisplayImage(Image img)
+    [
+        img.fillAmount = value;
+    ]
+
+    public void DisplayNumber(Text txt)
+    {
+        txt.text = value.ToString();
     }
 }
