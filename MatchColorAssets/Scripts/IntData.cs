@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Ui;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "New Int Data", menuName = "Int Data")]
 public class IntData : ScriptableObject
 {
     public int value;
+    
 
     public void SetValue(int num)
     {
@@ -42,9 +43,9 @@ public class IntData : ScriptableObject
     }
 
     public void DisplayImage(Image img)
-    [
+    {
         img.fillAmount = value;
-    ]
+    }
 
     public void DisplayNumber(Text txt)
     {
